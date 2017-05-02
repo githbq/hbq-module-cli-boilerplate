@@ -1,9 +1,5 @@
 #!/usr/bin/env node --harmony
 
-import * as path from 'path'
-
-console.log('path--->', path.join('adf', '/fsd/fsd/f/sdf/sd'))
-
 let yargs = require('yargs')
 let argv = yargs
     .command('init', '初始化', {
@@ -19,7 +15,7 @@ let argv = yargs
         }
     },
     (argv) => {
-        require('../command/init').start(argv)
+        require('./command/init').start(argv)
     })
     .help()
     .argv

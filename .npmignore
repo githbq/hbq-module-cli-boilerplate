@@ -10,8 +10,7 @@
 node_modules
 ##项目临时文件存放目录  
 temp/
-dist/
-build/
+dist/ 
 typings/
 
 #mac系统临时文件
@@ -40,3 +39,5 @@ tslint.json
 typings.json
 yarn.lock
 .vscode/ 
+*.ts
+*.map
