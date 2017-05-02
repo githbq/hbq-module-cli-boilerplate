@@ -1,6 +1,6 @@
 {
     "name": "xxx-cli",
-    "version": "0.0.9",
+    "version": "0.1.0",
     "description": "command line project boilerplate",
     "bin": {
         "xxx": "./build/index.js"
