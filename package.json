@@ -1,0 +1,33 @@
+{
+    "name": "xxx-cli",
+    "version": "0.0.1",
+    "description": "command line project boilerplate",
+    "bin": {
+        "xxx": "./build/index.js"
+    },
+    "scripts": {
+        "start": "node run",
+        "tsc": "tsc",
+        "tsc:w": "tsc -w"
+    },
+    "author": "hubiqing",
+    "license": "MIT",
+    "bugs": {
+        "url": "git@github.com:githbq/hbq-module-cli-boilerplate.git"
+    },
+    "homepage": "git@github.com:githbq/hbq-module-cli-boilerplate.git#readme",
+    "dependencies": {},
+    "devDependencies": {
+        "@types/node": "^6.0.48",
+        "ts-node": "^3.0.2",
+        "tslint": "^5.1.0",
+        "typescript": "^2.3.2",
+        "chalk": "^1.1.3",
+        "io-helper": "^0.0.7",
+        "lodash": "^4.17.4",
+        "prompt-promise": "^1.0.3",
+        "run-esx": "^0.0.3",
+        "runkoa": "^1.5.9",
+        "yargs": "^7.1.0"
+    }
+}
