@@ -1,9 +1,9 @@
 {
-    "name": "xxx-cli",
-    "version": "0.1.1",
+    "name": "xxxx-cli",
+    "version": "0.0.3",
     "description": "command line project boilerplate",
     "bin": {
-        "xxx": "./build/index.js"
+        "xxxx": "./build/index.js"
     },
     "scripts": {
         "start": "node run",
@@ -13,6 +13,10 @@
     "author": "hubiqing",
     "license": "MIT",
     "bugs": {
+        "url": "git@github.com:githbq/hbq-module-cli-boilerplate.git"
+    },
+    "repository": {
+        "type": "git",
         "url": "git@github.com:githbq/hbq-module-cli-boilerplate.git"
     },
     "homepage": "git@github.com:githbq/hbq-module-cli-boilerplate.git#readme",
