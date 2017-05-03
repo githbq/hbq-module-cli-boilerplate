@@ -8,7 +8,8 @@
     "scripts": {
         "start": "node run",
         "tsc": "tsc",
-        "tsc:w": "tsc -w"
+        "tsc:w": "tsc -w",
+        "publish": "tsc && npm publish"
     },
     "author": "hubiqing",
     "license": "MIT",
