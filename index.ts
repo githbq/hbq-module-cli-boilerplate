@@ -1,6 +1,8 @@
 #!/usr/bin/env node --harmony
 
-let yargs = require('yargs')
+import * as  yargs from 'yargs'
+import startCommand from './command/start'
+
 let argv = yargs
     .command('init', '初始化', {
         template: {
@@ -15,7 +17,7 @@ let argv = yargs
         }
     },
     (argv) => {
-        require('./command/init').start(argv)
+        startCommand.start(argv)
     })
     .help()
     .argv

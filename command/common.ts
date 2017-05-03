@@ -1,10 +1,10 @@
-const ioHelper = require('io-helper')
-const prompt = require('prompt-promise')
-const chalk = require('chalk')
-const _ = require('lodash')
-    /**
-     * 公共属性及方法
-     */
+import * as  ioHelper from 'io-helper'
+import * as prompt from 'prompt-promise'
+import * as  chalk from 'chalk'
+import * as _ from 'lodash'
+/**
+ * 公共属性及方法
+ */
 export default {
     rootPath: ioHelper.pathTool.join(__dirname, '..'),
     async prompt(describe) {
