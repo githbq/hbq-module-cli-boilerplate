@@ -1,6 +1,6 @@
 ![my love](./logo.png)
 
-## name 
+## 名称
 
 ## 描述  
 
