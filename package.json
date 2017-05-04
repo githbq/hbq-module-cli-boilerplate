@@ -30,6 +30,7 @@
         "io-helper": "^0.0.8",
         "lodash": "^4.17.4",
         "prompt-promise": "^1.0.3",
+        "spawn-helper": "^0.0.5",
         "tslib": "^1.6.1",
         "yargs": "^7.1.0"
     },
