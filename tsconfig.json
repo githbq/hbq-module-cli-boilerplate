@@ -21,7 +21,7 @@
             "node"
         ],
         "outDir": "./build",
-        "rootDir": "./ts"
+        "rootDir": "./src"
     },
     "exclude": [
         "node_modules",
