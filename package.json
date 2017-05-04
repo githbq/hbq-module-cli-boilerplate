@@ -7,9 +7,10 @@
     },
     "scripts": {
         "start": "node run",
-        "tsc": "tsc",
-        "tsc:w": "tsc -w",
-        "p": "tsc && npm publish"
+        "clear": "rimraf build",
+        "tsc": "npm run clear && tsc",
+        "tsc:w": "npm run clear && tsc -w",
+        "p": "npm run tsc && npm publish"
     },
     "author": "hubiqing",
     "license": "MIT",
@@ -30,6 +31,7 @@
     },
     "devDependencies": {
         "@types/node": "^6.0.48",
+        "rimraf": "^2.6.1",
         "ts-node": "^3.0.2",
         "tslib": "^1.6.1",
         "tslint": "^5.1.0",
