@@ -25,5 +25,26 @@ export default {
     },
     async exec(cmd: string, opt?: any) {
         return spawn.exec(cmd, opt)
+    },
+    console: {
+        ok: ' √ ',
+        no: ' × ',
+        color(color, msg, ok = null) {
+            var prefix = ok === null ? '' : ok === false ? this.no : this.ok;
+            console.log(chalk[color](`\n ${prefix} ${msg} \n`))
+        },
+        green(msg) {
+            this.color('green', msg)
+        },
+        red(msg) {
+            this.color('red', msg)
+        },
+        white(msg) {
+            this.color('white', msg)
+        },
+        any(fn) {
+            // chalk.blue.bgWhite(`✅`)
+            fn && console.log(fn.call(this, chalk));
+        }
     }
 }
