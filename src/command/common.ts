@@ -33,14 +33,14 @@ export default {
             var prefix = ok === null ? '' : ok === false ? this.no : this.ok;
             console.log(chalk[color](`\n ${prefix} ${msg} \n`))
         },
-        green(msg) {
-            this.color('green', msg)
+        green(msg, ok?: boolean) {
+            this.color('green', msg, ok)
         },
-        red(msg) {
-            this.color('red', msg)
+        red(msg, ok?: boolean) {
+            this.color('red', msg, ok)
         },
-        white(msg) {
-            this.color('white', msg)
+        white(msg, ok?: boolean) {
+            this.color('white', msg, ok)
         },
         any(fn) {
             // chalk.blue.bgWhite(`✅`)
