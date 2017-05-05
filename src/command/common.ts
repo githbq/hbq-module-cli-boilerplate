@@ -57,6 +57,7 @@ export default {
     rootPath,
     prompt,
     writeFile,
+    exit,
     confirm,
     exec,
     getCurrentBranchName,
