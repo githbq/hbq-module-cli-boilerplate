@@ -1,5 +1,5 @@
 import * as  ioHelper from 'io-helper'
-import prompt from 'prompt-promise2'
+import { prompt } from 'prompt-promise2'
 import * as  chalk from 'chalk'
 import * as _ from 'lodash'
 import spawn from 'spawn-helper'
