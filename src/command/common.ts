@@ -3,6 +3,7 @@ import { prompt } from 'prompt-promise2'
 import * as  chalk from 'chalk'
 import * as _ from 'lodash'
 import spawn from 'spawn-helper'
+import * as  stringify from 'json-stringify-pretty-compact'
 /**
  * 公共属性及方法
  */
@@ -29,6 +30,9 @@ export function getCurrentBranchName() {
     return spawn.exec('git symbolic-ref --short -q HEAD', { preventDefault: true }).then((a, b) => {
         return a.stdout.replace(/[\n]/g, '')
     })
+}
+export function stringify(obj) {
+    return stringify(obj);
 }
 export const consoleColor = {
     ok: ' √ ',
@@ -61,7 +65,8 @@ export default {
     confirm,
     exec,
     getCurrentBranchName,
-    consoleColor
+    consoleColor,
+    stringify
 }
 
 
