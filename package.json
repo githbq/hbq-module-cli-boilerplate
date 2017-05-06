@@ -31,16 +31,20 @@
         "json-stringify-pretty-compact": "^1.0.4",
         "lodash": "^4.17.4",
         "prompt-promise2": "^0.0.2",
+        "semver": "^5.3.0",
         "spawn-helper": "^0.0.5",
         "tslib": "^1.6.1",
         "yargs": "^7.1.0"
     },
     "devDependencies": {
-        "@types/chai": "^3.5.2",
         "@types/lodash": "^4.14.64",
         "@types/mocha": "^2.2.41",
         "@types/node": "^6.0.48",
+        "@types/semver": "^5.3.31",
+        "@types/should": "^8.3.0",
+        "mocha": "^3.3.0",
         "rimraf": "^2.6.1",
+        "should": "^11.2.1",
         "ts-node": "^3.0.2",
         "tslint": "^5.1.0",
         "typescript": "^2.3.2"

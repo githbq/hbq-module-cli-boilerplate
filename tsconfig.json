@@ -20,9 +20,10 @@
         ],
         "types": [
             "node",
-            "chai",
             "mocha",
-            "lodash"
+            "lodash",
+            "semver",
+            "should"
         ],
         "outDir": "./build",
         "rootDir": "./src"
