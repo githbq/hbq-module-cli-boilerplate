@@ -37,6 +37,7 @@
     },
     "devDependencies": {
         "@types/chai": "^3.5.2",
+        "@types/lodash": "^4.14.64",
         "@types/mocha": "^2.2.41",
         "@types/node": "^6.0.48",
         "rimraf": "^2.6.1",

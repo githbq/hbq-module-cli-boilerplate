@@ -21,7 +21,8 @@
         "types": [
             "node",
             "chai",
-            "mocha"
+            "mocha",
+            "lodash"
         ],
         "outDir": "./build",
         "rootDir": "./src"

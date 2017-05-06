@@ -6,6 +6,10 @@
   version "3.5.2"
   resolved "https://registry.npmjs.org/@types/chai/-/chai-3.5.2.tgz#c11cd2817d3a401b7ba0f5a420f35c56139b1c1e"
 
+"@types/lodash@^4.14.64":
+  version "4.14.64"
+  resolved "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.64.tgz#979cf3a3d4a368670840bf9b3e448dc33ffe84ee"
+
 "@types/mocha@^2.2.41":
   version "2.2.41"
   resolved "https://registry.npmjs.org/@types/mocha/-/mocha-2.2.41.tgz#e27cf0817153eb9f2713b2d3f6c68f1e1c3ca608"
