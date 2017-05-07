@@ -3,18 +3,27 @@ import { prompt } from 'prompt-promise2'
 import * as  chalk from 'chalk'
 import * as _ from 'lodash'
 import spawn from 'spawn-helper'
-import * as  stringify from 'json-stringify-pretty-compact'
+import * as  stringifyOrigin from 'json-stringify-pretty-compact'
 import * as semver from 'semver'
 /**
  * 公共属性及方法
  */
+export const pathTool = ioHelper.pathTool
 export const cwd = process.cwd()
 export const rootPath = ioHelper.pathTool.join(__dirname, '..', '..')
 export async function prompt(describe) {
     let value = await prompt(describe)
     return _.trim(value)
 }
-
+export function stringify(obj, options = {}) {
+    return stringifyOrigin(obj, { maxLength: 50, indent: 4, ...options })
+}
+/**
+ * 从根节点引用文件
+ */
+export function requireRoot(...paths) {
+    return require(pathTool.join.apply(null, [cwd].concat(paths)))
+}
 export const packageHelper = {
     getPath() {
         return ioHelper.pathTool.join(this.cwd || cwd, 'package.json')
@@ -35,7 +44,10 @@ export const packageHelper = {
     },
 }
 
-export function writeFile(path, content) {
+export function writeFile(path, content, options: any = { fromRoot: false }) {
+    path = pathTool.join.apply(null, (options.fromRoot ? [rootPath] : []).concat(path))//考虑多路径处理
+    //对对象进行 美化格式处理
+    content = _.isObject(content) ? stringify(content) : content
     return ioHelper.writeFile(path, content)
 }
 export function exit() {
@@ -69,6 +81,12 @@ export const consoleColor = {
     white(msg, ok?: boolean) {
         this.color('white', msg, ok)
     },
+    error(e: Error) {
+        this.red(e.message)
+    },
+    start(msg) {
+        this.white(`\n\n$> 开始:${chalk.blue.bgWhite(msg)}`)
+    },
     any(fn) {
         // chalk.blue.bgWhite(`✅`)
         fn && console.log(fn.call(this, chalk));
@@ -85,7 +103,9 @@ export default {
     getCurrentBranchName,
     consoleColor,
     stringify,
-    packageHelper
+    packageHelper,
+    pathTool,
+    requireRoot
 }
 
 
