@@ -5,10 +5,15 @@ import * as  yargs from 'yargs'
  * 将每一个命令文件里面的 command属性注册到yargs
  */
 export default {
+    getCommands(cb?) {
+        return requireHelper.requireDir(__dirname, cb, () => {
+
+        })
+    },
     start() {
-        const commands = requireHelper.requireDir(__dirname)
-        var a = [];
-        commands.forEach(({ name, result }) => {
+
+
+        this.getCommands().forEach(({ name, result }) => {
             if (name !== 'common' && result.command) {
                 /**
                  * 每一个命令文件必须有command参数 用来定义命令参数

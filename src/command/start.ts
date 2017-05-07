@@ -1,4 +1,4 @@
-import common from './common'
+import common from './_common'
 const { exit } = common;
 import * as _ from 'lodash'
 export default {

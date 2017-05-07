@@ -2,6 +2,7 @@
     "name": "xxxx-cli",
     "version": "0.0.1",
     "description": "command line project boilerplate",
+    "main": "./build/command/index",
     "bin": {
         "xxxx": "./build/index.js"
     },
