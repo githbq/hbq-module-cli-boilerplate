@@ -5,6 +5,8 @@ import * as _ from 'lodash'
 import spawn from 'spawn-helper'
 import * as  stringifyOrigin from 'json-stringify-pretty-compact'
 import * as semver from 'semver'
+import * as  prettyMsOrigin from 'pretty-ms'
+import * as ora from 'ora'
 /**
  * 公共属性及方法
  */
@@ -65,6 +67,12 @@ export function getCurrentBranchName(opts = {}) {
         return a.stdout.replace(/[\n]/g, '')
     })
 }
+/**
+ * 美化时间毫秒输出
+ */
+export function prettyMs(ms: number) {
+    return prettyMsOrigin(ms, { verbose: true })
+}
 export const consoleColor = {
     ok: ' √ ',
     no: ' × ',
@@ -90,8 +98,34 @@ export const consoleColor = {
     any(fn) {
         // chalk.blue.bgWhite(`✅`)
         fn && console.log(fn.call(this, chalk));
+    },
+    timeCache: {},
+    time(key: string) {
+        this.timeCache[key] = new Date().getTime()
+    },
+    timeEnd(key: string) {
+        let now: number = new Date().getTime()
+        let startTime: number = this.timeCache[key]
+        if (startTime) {
+            this.green(`${key}:${prettyMs(now - startTime)}`)
+        }
+    },
+    /**
+     * 控制台显示旋转动画  返回 spinner 对象 api查看 ora库
+     */
+    showSpin(msg: string | object) {
+        const spinner = ora(msg).start()
+        return {
+            ok: spinner.succeed,
+            error: spinner.fail,
+            warn: spinner.warn,
+            info: spinner.info,
+            keep: spinner.stopAndPersist,
+            self: spinner
+        }
     }
 }
+
 export default {
     cwd,
     rootPath,
