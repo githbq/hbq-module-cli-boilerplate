@@ -401,6 +401,21 @@ invert-kv@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
 
+io-helper@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.npmjs.org/io-helper/-/io-helper-0.0.5.tgz#b2932a0050be89bd1523dcc965aa81f121e78117"
+  dependencies:
+    bluebird "^3.5.0"
+    file-system "^2.2.2"
+    fs-extra-promise "^1.0.1"
+    json-stringify-pretty-compact "^1.0.3"
+    lodash "^4.17.4"
+    mkdirp "^0.5.1"
+    mkdirp-promise "^5.0.1"
+    node-dir "^0.1.16"
+    promise-path "^1.2.3"
+    readline-promise "^0.0.1"
+
 io-helper@^0.0.8:
   version "0.0.8"
   resolved "https://registry.npmjs.org/io-helper/-/io-helper-0.0.8.tgz#0dbdb715c66df5d4a6a6423e80a0456831f08f5d"
@@ -811,9 +826,21 @@ request@^2.72.0:
     tunnel-agent "^0.6.0"
     uuid "^3.0.0"
 
+require-dir@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.npmjs.org/require-dir/-/require-dir-0.3.1.tgz#b5a8e28bae0343bb0d0cc38ab1f531e1931b264a"
+
 require-directory@^2.1.1:
   version "2.1.1"
   resolved "https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
+
+require-helper@^0.0.14:
+  version "0.0.14"
+  resolved "https://registry.npmjs.org/require-helper/-/require-helper-0.0.14.tgz#cc0356c9a806a3521e1b9b24c5013c5988af07f4"
+  dependencies:
+    io-helper "^0.0.5"
+    lodash "^4.17.4"
+    require-dir "^0.3.1"
 
 require-main-filename@^1.0.1:
   version "1.0.1"
