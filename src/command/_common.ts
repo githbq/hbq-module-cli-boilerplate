@@ -11,7 +11,7 @@ import * as ora from 'ora'
  * 公共属性及方法
  */
 export const pathTool = ioHelper.pathTool
-export const cwd = process.cwd()
+export const cwd = process.cwd().replace(/\\/g, '/')
 export const rootPath = ioHelper.pathTool.join(__dirname, '..', '..')
 export async function prompt(describe) {
     let value = await prompt(describe)
@@ -24,7 +24,12 @@ export function stringify(obj, options = {}) {
  * 从根节点引用文件
  */
 export function requireRoot(...paths) {
-    return require(pathTool.join.apply(null, [cwd].concat(paths)))
+    const path = pathTool.join.apply(null, [rootPath].concat(paths))
+    return require(path)
+}
+export function requireCwd(...paths) {
+    const path = pathTool.join.apply(null, [cwd].concat(paths))
+    return require(path)
 }
 export const packageHelper = {
     getPath() {
@@ -46,8 +51,8 @@ export const packageHelper = {
     },
 }
 
-export function writeFile(path, content, options: any = { fromRoot: false }) {
-    path = pathTool.join.apply(null, (options.fromRoot ? [rootPath] : []).concat(path))//考虑多路径处理
+export function writeFile(path, content, options: any = { fromRoot: false, fromCwd: false }) {
+    path = pathTool.join.apply(null, (options.fromRoot ? [rootPath] : options.fromCwd ? [cwd] : []).concat(path))//考虑多路径处理
     //对对象进行 美化格式处理
     content = _.isObject(content) ? stringify(content) : content
     return ioHelper.writeFile(path, content)
@@ -113,14 +118,14 @@ export const consoleColor = {
     /**
      * 控制台显示旋转动画  返回 spinner 对象 api查看 ora库
      */
-    showSpin(msg: string | object) {
+    showSpiner(msg: string | object) {
         const spinner = ora(msg).start()
         return {
-            ok: spinner.succeed,
-            error: spinner.fail,
-            warn: spinner.warn,
-            info: spinner.info,
-            keep: spinner.stopAndPersist,
+            ok: spinner.succeed.bind(spinner),
+            error: spinner.fail.bind(spinner),
+            warn: spinner.warn.bind(spinner),
+            info: spinner.info.bind(spinner),
+            keep: spinner.stopAndPersist.bind(spinner),
             self: spinner
         }
     }
@@ -139,7 +144,8 @@ export default {
     stringify,
     packageHelper,
     pathTool,
-    requireRoot
+    requireRoot,
+    requireCwd
 }
 
 
