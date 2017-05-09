@@ -9,7 +9,7 @@ export default {
         console.log('hello cli')
         exit()
     },
-    command: ['start', {},
+    command: ['start','开始', {},
         (argv) => {
             exports.default.start(argv)
         }
