@@ -1,3 +1,4 @@
 #!/usr/bin/env node                 
-import command from './command'
-command.start()
+
+
+console.log('hello xxxx')
