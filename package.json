@@ -1,9 +1,12 @@
 {
     "name": "xxxx-cli",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "command line project boilerplate",
     "main": "build/command",
-    "bin": {"xxxx": "./build/index.js"},
+    "bin": {
+        "xxxx": "./build/index.js",
+        "xxxx2": "./bin.js"
+    },
     "scripts": {
         "start": "node run",
         "clear": "rimraf build",

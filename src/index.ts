@@ -1,4 +1,2 @@
-#!/usr/bin/env node     
-
-
-console.log('OOOOOOOOOOOOOOOKKKKKKKKKKKKKKKKKKK')
+#!/usr/bin/env node                        
+console.log('srcsrcsrcsrcsrcsrc')

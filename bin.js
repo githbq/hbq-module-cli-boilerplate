@@ -1,2 +1,2 @@
 #!/usr/bin/env node                        
-require('./build/index.js')
+console.log('bin.jsbin.jsbin.jsbin.jsbin.jsbin.js')
