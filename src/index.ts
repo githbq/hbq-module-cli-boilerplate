@@ -1,3 +1,4 @@
+#!/usr/bin/env node     
 
-require('./command').start()
-console.log('hello xxxx')
+
+console.log('OOOOOOOOOOOOOOOKKKKKKKKKKKKKKKKKKK')

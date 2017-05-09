@@ -3,6 +3,7 @@
         "target": "es2017",
         "module": "commonjs",
         "moduleResolution": "node",
+        "emitBOM": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
