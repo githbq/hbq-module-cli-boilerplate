@@ -1,8 +1,8 @@
 {
     "name": "xxxx-cli",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "command line project boilerplate",
-    "main": "./build/command/index",
+    "main": "build/command/index",
     "bin": {"xxxx": "build/index.js"},
     "scripts": {
         "start": "node run",
