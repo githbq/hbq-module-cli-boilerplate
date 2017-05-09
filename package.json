@@ -1,11 +1,9 @@
 {
     "name": "xxxx-cli",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "command line project boilerplate",
     "main": "./build/command/index",
-    "bin": {
-        "xxxx": "./build/index.js"
-    },
+    "bin": {"xxxx": "./build/index.js"},
     "scripts": {
         "start": "node run",
         "clear": "rimraf build",
@@ -13,9 +11,7 @@
         "tsc:w": "npm run clear && tsc -w",
         "p": "npm run tsc && npm publish"
     },
-    "keywords": [
-        "typescript"
-    ],
+    "keywords": ["typescript"],
     "author": "hubiqing",
     "license": "MIT",
     "bugs": {
