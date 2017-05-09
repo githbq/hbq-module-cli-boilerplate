@@ -8,5 +8,10 @@ export default {
     async start(data) {
         console.log('hello cli')
         exit()
-    }
+    },
+    command: ['start', {},
+        (argv) => {
+            exports.default.start(argv)
+        }
+    ]
 }
