@@ -12,18 +12,15 @@
         "noEmitHelpers": true,
         "importHelpers": true,
         "strictNullChecks": false,
-        "lib": [
-            "es6"
-        ],
-        "typeRoots": [
-            "node_modules/@types"
-        ],
+        "lib": ["es6"],
+        "typeRoots": ["node_modules/@types"],
         "types": [
             "node",
             "mocha",
             "lodash",
             "semver",
-            "should"
+            "should",
+            "fs-extra-promise"
         ],
         "outDir": "./build",
         "rootDir": "./src"

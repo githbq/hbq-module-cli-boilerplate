@@ -7,7 +7,7 @@ import * as  stringifyOrigin from 'json-stringify-pretty-compact'
 import * as semver from 'semver'
 import * as  prettyMsOrigin from 'pretty-ms'
 import * as ora from 'ora'
-import * as fs from 'fs'
+import * as fs from 'fs-extra-promise'
 /**
  * 公共属性及方法
  */
@@ -39,7 +39,7 @@ export const packageHelper = {
         return require(this.getPath())
     },
     write(jsonObj: object) {
-        return writeFile(this.getPath(), stringify(jsonObj))
+        return io.writeFile(this.getPath(), stringify(jsonObj))
     },
     //获取version
     getVersion() {
@@ -50,17 +50,19 @@ export const packageHelper = {
         return [semver.major(version), semver.minor(version), semver.patch(version)].join('.');
     },
 }
-
-export function writeFile(path, content, options: any = { fromRoot: false, fromCwd: false }) {
-    path = pathTool.join.apply(null, (options.fromRoot ? [rootPath] : options.fromCwd ? [cwd] : []).concat(path))//考虑多路径处理
-    //对对象进行 美化格式处理
-    content = _.isObject(content) ? stringify(content) : content
-    return new Promise((resolve, reject) => {
-        fs.writeFile(path, content, (err) => {
-            if (err) reject(err);
-            resolve({ path, content })
-        })
-    })
+export const io = {
+    pathTool,
+    readFile(path) {
+        return fs.readFile(path, 'utf8')
+    },
+    writeFile(path, content, options: any = { fromRoot: false, fromCwd: false }) {
+        path = pathTool.join.apply(null, (options.fromRoot ? [rootPath] : options.fromCwd ? [cwd] : []).concat(path))//考虑多路径处理
+        //对对象进行 美化格式处理
+        content = _.isObject(content) ? stringify(content) : content
+        return fs.outputFile(path, content)
+    }, delete(path) {
+        fs.remove(path)
+    }
 }
 export function exit() {
     process.exit()
@@ -140,7 +142,7 @@ export default {
     cwd,
     rootPath,
     prompt,
-    writeFile,
+    io,
     exit,
     confirm,
     exec,
