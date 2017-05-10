@@ -12,7 +12,7 @@ import * as fs from 'fs-extra-promise'
  * 公共属性及方法
  */
 export const cwd = process.cwd().replace(/\\/g, '/')
-export const rootPath = pathTool.join(__dirname, '..', '..')
+export const rootPath = pathTool.join(__dirname, '..')
 export async function prompt(describe) {
     let value = await prompt(describe)
     return _.trim(value)
@@ -54,17 +54,17 @@ export const io = {
     pathTool,
     read(path) {
         path = pathTool.join.apply(null, [].concat(path))
-        return fs.readFile(path, 'utf8')
+        return fs.readFileAsync(path, 'utf8')
     },
     write(path, content, options: any = { fromRoot: false, fromCwd: false }) {
         path = pathTool.join.apply(null, [].concat(path))
         path = pathTool.join.apply(null, (options.fromRoot ? [rootPath] : options.fromCwd ? [cwd] : []).concat(path))//考虑多路径处理
         //对对象进行 美化格式处理
         content = _.isObject(content) ? stringify(content) : content
-        return fs.outputFile(path, content)
+        return fs.outputFileAsync(path, content)
     }, delete(path) {
         path = pathTool.join.apply(null, [].concat(path))
-        return fs.remove(path)
+        return fs.removeAsync(path)
     },
     exists(path) {
         path = pathTool.join.apply(null, [].concat(path))

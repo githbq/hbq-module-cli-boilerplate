@@ -1,4 +1,4 @@
-import { exit } from './common'
+import { exit } from '../common'
 import * as _ from 'lodash'
 export default {
     /**
