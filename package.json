@@ -3,7 +3,9 @@
     "version": "1.0.2",
     "description": "command line project boilerplate",
     "main": "build/command",
-    "bin": {"xxxx": "./bin.js"},
+    "bin": {
+        "xxxx": "./bin.js"
+    },
     "scripts": {
         "start": "node run",
         "clear": "rimraf build",
@@ -11,7 +13,9 @@
         "tsc:w": "npm run clear && tsc -w",
         "p": "npm run tsc && npm publish"
     },
-    "keywords": ["typescript"],
+    "keywords": [
+        "typescript"
+    ],
     "author": "hubiqing",
     "license": "MIT",
     "bugs": {
@@ -30,7 +34,7 @@
         "ora": "^1.2.0",
         "pretty-ms": "^2.1.0",
         "prompt-promise2": "^0.0.2",
-        "require-helper": "^0.0.14",
+        "require-dir": "^0.3.1",
         "semver": "^5.3.0",
         "spawn-helper": "^0.0.5",
         "tslib": "^1.6.1",

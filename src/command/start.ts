@@ -1,5 +1,4 @@
-import common from './_common'
-const { exit } = common;
+import { exit } from './common'
 import * as _ from 'lodash'
 export default {
     /**
@@ -9,9 +8,6 @@ export default {
         console.log('hello cli')
         exit()
     },
-    command: ['start','开始', {},
-        (argv) => {
-            exports.default.start(argv)
-        }
+    command: ['start', '开始', {}
     ]
 }
