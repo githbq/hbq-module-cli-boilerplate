@@ -39,7 +39,7 @@ export const packageHelper = {
         return require(this.getPath())
     },
     write(jsonObj: object) {
-        return io.writeFile(this.getPath(), stringify(jsonObj))
+        return io.write(this.getPath(), jsonObj)
     },
     //获取version
     getVersion() {
@@ -52,16 +52,23 @@ export const packageHelper = {
 }
 export const io = {
     pathTool,
-    readFile(path) {
+    read(path) {
+        path = pathTool.join.apply(null, [].concat(path))
         return fs.readFile(path, 'utf8')
     },
-    writeFile(path, content, options: any = { fromRoot: false, fromCwd: false }) {
+    write(path, content, options: any = { fromRoot: false, fromCwd: false }) {
+        path = pathTool.join.apply(null, [].concat(path))
         path = pathTool.join.apply(null, (options.fromRoot ? [rootPath] : options.fromCwd ? [cwd] : []).concat(path))//考虑多路径处理
         //对对象进行 美化格式处理
         content = _.isObject(content) ? stringify(content) : content
         return fs.outputFile(path, content)
     }, delete(path) {
-        fs.remove(path)
+        path = pathTool.join.apply(null, [].concat(path))
+        return fs.remove(path)
+    },
+    exists(path) {
+        path = pathTool.join.apply(null, [].concat(path))
+        return fs.existsAsync(path)
     }
 }
 export function exit() {
