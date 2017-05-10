@@ -1,6 +1,6 @@
 import * as requireDir from 'require-dir'
 import * as  yargs from 'yargs'
-import { exit } from './common'
+import { exit } from './lib'
 export function start() {
     const commands = requireDir('./command')
     Object.keys(commands).forEach(key => {
