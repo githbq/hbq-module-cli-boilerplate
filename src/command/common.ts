@@ -1,4 +1,4 @@
-import * as  ioHelper from 'io-helper'
+import * as  pathTool from 'path'
 import { prompt } from 'prompt-promise2'
 import * as  chalk from 'chalk'
 import * as _ from 'lodash'
@@ -7,12 +7,12 @@ import * as  stringifyOrigin from 'json-stringify-pretty-compact'
 import * as semver from 'semver'
 import * as  prettyMsOrigin from 'pretty-ms'
 import * as ora from 'ora'
+import * as fs from 'fs'
 /**
  * 公共属性及方法
  */
-export const pathTool = ioHelper.pathTool
 export const cwd = process.cwd().replace(/\\/g, '/')
-export const rootPath = ioHelper.pathTool.join(__dirname, '..', '..')
+export const rootPath = pathTool.join(__dirname, '..', '..')
 export async function prompt(describe) {
     let value = await prompt(describe)
     return _.trim(value)
@@ -33,7 +33,7 @@ export function requireCwd(...paths) {
 }
 export const packageHelper = {
     getPath() {
-        return ioHelper.pathTool.join(this.cwd || cwd, 'package.json')
+        return pathTool.join(this.cwd || cwd, 'package.json')
     },
     get() {
         return require(this.getPath())
@@ -55,7 +55,12 @@ export function writeFile(path, content, options: any = { fromRoot: false, fromC
     path = pathTool.join.apply(null, (options.fromRoot ? [rootPath] : options.fromCwd ? [cwd] : []).concat(path))//考虑多路径处理
     //对对象进行 美化格式处理
     content = _.isObject(content) ? stringify(content) : content
-    return ioHelper.writeFile(path, content)
+    return new Promise((resolve, reject) => {
+        fs.writeFile(path, content, (err) => {
+            if (err) reject(err);
+            resolve({ path, content })
+        })
+    })
 }
 export function exit() {
     process.exit()
