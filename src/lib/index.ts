@@ -3,10 +3,12 @@ import * as _ from 'lodash'
 import * as pathTool from 'path'
 import spawn from 'spawn-helper'
 import * as  prettyMsOrigin from 'pretty-ms'
-import { rootPath, cwd } from './consts'
-
+import { rootPath, cwd } from './consts' 
 /**exports*/
 export * from './consoleColor'
+export * from './consts'
+export * from './io'
+ 
 /**
  * json美化
  */
