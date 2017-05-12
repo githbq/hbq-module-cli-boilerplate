@@ -3,13 +3,15 @@
     "version": "1.0.3",
     "description": "command line project boilerplate",
     "main": "build/command",
-    "bin": {"xxxx": "./bin.js"},
+    "bin": { "xxxx": "./bin.js" },
     "scripts": {
+        "start:build": "npm run clear && node build",
         "start": "node run",
         "clear": "rimraf build",
         "tsc": "npm run clear && tsc",
         "tsc:w": "npm run clear && tsc -w",
-        "p": "npm run tsc && npm publish"
+        "p": "npm run tsc && npm publish",
+        "test": "mocha src/**/*.test.ts"
     },
     "keywords": ["typescript"],
     "author": "hubiqing",
