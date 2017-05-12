@@ -52,5 +52,5 @@
         "tslint": "^5.1.0",
         "typescript": "^2.3.2"
     },
-    "node": ">=7.6"
+    "engines": { "node": ">=7.6" }
 }
