@@ -5,7 +5,7 @@ export const consoleColor = {
     ok: ' √ ',
     no: ' × ',
     color(color, msg, ok = null) {
-        var prefix = ok === null ? '' : ok === false ? this.no : this.ok;
+        let prefix = ok === null ? '' : ok === false ? this.no : this.ok;
         console.log(chalk[color](`\n ${prefix} ${msg} \n`))
     },
     green(msg, ok?: boolean) {

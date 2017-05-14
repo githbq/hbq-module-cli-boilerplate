@@ -11,7 +11,8 @@
         "tsc": "npm run clear && tsc",
         "tsc:w": "npm run clear && tsc -w",
         "p": "npm run tsc && npm publish",
-        "test": "mocha src/**/*.test.ts"
+        "test": "mocha src/**/*.test.ts",
+        "lint": "tslint \"src/**/*.ts\""
     },
     "keywords": ["typescript"],
     "author": "hubiqing",
