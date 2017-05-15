@@ -5,7 +5,7 @@ export const consoleColor = {
     ok: ' √ ',
     no: ' × ',
     color(color, msg, ok = null) {
-        let prefix = ok === null ? '' : ok === false ? this.no : this.ok;
+        let prefix = ok === null ? '' : ok === false ? this.no : this.ok
         console.log(chalk[color](`\n ${prefix} ${msg} \n`))
     },
     green(msg, ok?: boolean) {
@@ -25,7 +25,7 @@ export const consoleColor = {
     },
     any(fn) {
         // chalk.blue.bgWhite(`✅`)
-        fn && console.log(fn.call(this, chalk));
+        fn && console.log(fn.call(this, chalk))
     },
     timeCache: {},
     time(key: string) {
