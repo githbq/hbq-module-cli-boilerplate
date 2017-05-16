@@ -1,5 +1,5 @@
 import * as chalk from 'chalk'
-import { prettyMs } from '.'
+import { prettyMs } from './other'
 import * as ora from 'ora'
 export const consoleColor = {
     ok: ' √ ',
