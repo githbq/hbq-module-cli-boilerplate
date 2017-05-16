@@ -12,15 +12,15 @@
         "noEmitHelpers": true,
         "importHelpers": true,
         "strictNullChecks": false,
-        "lib": ["es6"],
+        "lib": ["es2017"],
         "typeRoots": ["node_modules/@types"],
         "types": [
-            "node",
-            "mocha",
+            "fs-extra-promise",
             "lodash",
+            "mocha",
+            "node",
             "semver",
-            "should",
-            "fs-extra-promise"
+            "should"
         ],
         "outDir": "./build",
         "rootDir": "./src"
@@ -28,7 +28,8 @@
     "exclude": [
         "node_modules",
         "build",
-        "**/*.test.ts"
+        "**/*.test.ts",
+        "temp"
     ],
     "compileOnSave": false,
     "buildOnSave": false
