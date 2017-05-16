@@ -1,7 +1,7 @@
 import * as pathTool from 'path'
 import * as fs from 'fs-extra-promise'
 import { rootPath, cwd } from './consts'
-import { stringify } from '.'
+import { stringify } from './other'
 import * as _ from 'lodash'
 export const io = {
     pathTool,
