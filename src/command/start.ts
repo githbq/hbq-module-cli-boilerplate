@@ -1,12 +1,11 @@
-import { exit } from '../lib'
-import * as _ from 'lodash'
+import { consoleColor } from '../lib'
 export default {
     /**
      * 启动
      */
     async start(data) {
         console.log('hello cli')
-        exit()
+        consoleColor.start('npm run sdf atesdavdaf dfas fdas sfd')
     },
     command: ['start', '开始', {}
     ]
