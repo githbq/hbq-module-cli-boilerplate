@@ -1,15 +1,23 @@
 import * as chalk from 'chalk'
-import { prettyMs } from './other'
 import * as ora from 'ora'
+
+import { prettyMs } from './other'
+
 export const consoleColor = {
     ok: ' √ ',
     no: ' × ',
     color(color, msg, ok = null) {
         let prefix = ok === null ? '' : ok === false ? this.no : this.ok
-        console.log(chalk[color](`\n ${prefix} ${msg} \n`))
+        console.log(chalk[color](`\n ${prefix} ${msg} `))
+    },
+    grey(msg, ok?: boolean) {
+        this.color('grey', msg, ok)
     },
     green(msg, ok?: boolean) {
         this.color('green', msg, ok)
+    },
+    yellow(msg, ok?: boolean) {
+        this.color('yellow', msg, ok)
     },
     red(msg, ok?: boolean) {
         this.color('red', msg, ok)
@@ -21,7 +29,7 @@ export const consoleColor = {
         this.red(e.message)
     },
     start(msg) {
-        this.white(`\n\n$> 开始:${chalk.blue.bgWhite(msg)}`)
+        this.white(`$> 开始:${chalk.blue.bgWhite(msg)}`)
     },
     any(fn) {
         // chalk.blue.bgWhite(`✅`)
