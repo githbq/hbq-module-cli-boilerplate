@@ -1,20 +1,18 @@
-![my love](./logo.png)
+> 项目描述
 
-## 名称
+![my love](./logo.png) 
 
-## 描述  
+## 功能介绍
+1. 简介1 
+2. 简介2   
 
-## 说明
+## 安装
+```
+yarn
+```
 
-- tslib需要安装在dependency配置里面,会在生成的build文件里自动import
-- nodejs 版本必须高于7.6
-
-### tsconfig 
-- https://zhongsp.gitbooks.io/typescript-handbook/content/doc/handbook/tsconfig.json.html
-- https://tslang.cn/docs/handbook/compiler-options.html
-
- 
- 
-
-
+## 测试   
+```
+npm run test    
+```
  
