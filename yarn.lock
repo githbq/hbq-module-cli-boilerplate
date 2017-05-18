@@ -32,10 +32,6 @@
   version "6.0.71"
   resolved "https://registry.npmjs.org/@types/node/-/node-6.0.71.tgz#aa49e0109e35f1457867b45822caf7f4883ca248"
 
-"@types/semver@^5.3.31":
-  version "5.3.31"
-  resolved "https://registry.npmjs.org/@types/semver/-/semver-5.3.31.tgz#b999d7d935f43f5207b01b00d3de20852f4ca75f"
-
 "@types/should@^8.3.0":
   version "8.3.0"
   resolved "https://registry.npmjs.org/@types/should/-/should-8.3.0.tgz#e2b460243685dbe377182f39ef38d37f4d157ada"
