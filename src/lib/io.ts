@@ -22,7 +22,7 @@ export const io = {
     },
     read(path: string | Array<string>, options: any = { fromRoot: false, fromCwd: false }) {
         const newPath = this.resolveOptions(path, options)
-        return fs.readFileAsync(newPath, 'UTF8')
+        return fs.readFileAsync(newPath, 'utf8')
     },
     readJson(path: string | Array<string>, options: any = { fromRoot: false, fromCwd: false }) {
         const newPath = this.resolveOptions(path, options)
