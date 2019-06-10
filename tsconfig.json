@@ -22,7 +22,6 @@
     ],
     "types": [
       "cli-color",
-      "fs-extra-promise",
       "lodash",
       "mocha",
       "node",
