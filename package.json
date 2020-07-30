@@ -13,34 +13,32 @@
         "tsc": "npm run clear && tsc",
         "tsc:w": "npm run clear && tsc -w",
         "p": "npm run tsc && npm publish",
-        "test": "mocha src/**/*.test.ts",
+        "test": "jest --forceExit --detectOpenHandles",
         "lint": "tslint \"src/**/*.ts\" --fix"
     },
     "dependencies": {
-        "cli-color": "^1.2.0",
+        "cli-color": "^2.0.0",
         "fs-extra-promise": "^1.0.1",
-        "json-stringify-pretty-compact": "^1.0.4",
+        "json-stringify-pretty-compact": "^2.0.0",
         "lodash": "^4.17.4",
+        "moment-helper": "^0.0.2",
         "ora": "^1.2.0",
         "pretty-ms": "^2.1.0",
         "prompt-promise2": "^0.0.2",
         "require-dir": "^0.3.1",
         "spawn-helper": "^0.0.5",
-        "tslib": "^1.9.3",
+        "tslib": "^2.0.0",
         "yargs": "^7.1.0"
     },
     "devDependencies": {
         "@types/cli-color": "^0.3.29",
         "@types/lodash": "^4.14.64",
-        "@types/mocha": "^2.2.41",
         "@types/node": "^6.0.48",
-        "@types/should": "^8.3.0",
-        "mocha": "^3.3.0",
+        "jest": "^26.1.0",
         "rimraf": "^2.6.1",
-        "should": "^11.2.1",
         "ts-node": "^3.0.2",
         "tslint": "^5.1.0",
-        "typescript": "^3.5.1"
+        "typescript": "^3.9.7"
     },
     "keywords": [
         "typescript"
@@ -48,7 +46,7 @@
     "author": "hubiqing",
     "repository": "https://github.com/githbq/hbq-module-cli-boilerplate.git",
     "engines": {
-        "node": ">=7.6"
+        "node": ">=10"
     },
     "license": "MIT"
 }

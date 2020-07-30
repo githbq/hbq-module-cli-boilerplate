@@ -23,9 +23,7 @@
     "types": [
       "cli-color",
       "lodash",
-      "mocha",
-      "node",
-      "should"
+      "node" 
     ],
     "outDir": "./build",
     "rootDir": "./src"
