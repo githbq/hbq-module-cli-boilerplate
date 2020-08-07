@@ -23,16 +23,13 @@
     "types": [
       "cli-color",
       "lodash",
-      "node" 
+      "node"
     ],
     "outDir": "./build",
     "rootDir": "./src"
   },
-  "exclude": [
-    "node_modules",
-    "build",
-    "**/*.test.ts",
-    "temp"
+  "include": [
+    "./src"
   ],
   "compileOnSave": false,
   "buildOnSave": false
