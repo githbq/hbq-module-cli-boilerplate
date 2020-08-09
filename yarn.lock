@@ -1985,6 +1985,11 @@ isobject@^3.0.0, isobject@^3.0.1:
   resolved "https://registry.npm.taobao.org/isobject/download/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
+isos@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.npmjs.org/isos/-/isos-0.0.3.tgz#9d4cc1572dd7d844df33fa7d01b0a12ad2a2d4fd"
+  integrity sha1-nUzBVy3X2ETfM/p9AbChKtKi1P0=
+
 isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.npm.taobao.org/isstream/download/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"

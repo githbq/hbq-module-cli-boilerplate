@@ -6,18 +6,20 @@ export default {
     async start(data) {
         console.log('hello cli')
     },
-    command: ['start', '开始', {
-        // remove: {
-        //     alias: ['r'],
-        //     boolean: true,
-        //     describe: 'describe'
-        // },
-        // lib: {
-        //     alias: ['l'],
-        //     boolean: true,
-        //     default: false,
-        //     describe: 'describe'
-        // }
-    }
+    command: [
+        '开始',
+        {
+            // remove: {
+            //     alias: ['r'],
+            //     boolean: true,
+            //     describe: 'describe'
+            // },
+            // lib: {
+            //     alias: ['l'],
+            //     boolean: true,
+            //     default: false,
+            //     describe: 'describe'
+            // }
+        }
     ]
 }
