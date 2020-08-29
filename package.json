@@ -1,11 +1,9 @@
 {
     "name": "xxxx-cli",
-    "version": "1.0.0",
+    "version": "1.0.10",
     "description": "command line project boilerplate",
     "main": "build/command",
-    "bin": {
-        "xxxx": "./bin.js"
-    },
+    "bin": {"xxxx": "./bin.js"},
     "scripts": {
         "start:build": "npm run tsc && node build",
         "start": "node run",
@@ -18,13 +16,14 @@
     },
     "dependencies": {
         "cli-color": "^2.0.0",
+        "fs-extra": "^9.0.1",
         "fs-extra-promise": "^1.0.1",
+        "inquirer": "^7.3.3",
         "json-stringify-pretty-compact": "^2.0.0",
         "lodash": "^4.17.4",
         "moment-helper": "^0.0.2",
         "ora": "^1.2.0",
         "pretty-ms": "^2.1.0",
-        "prompt-promise2": "^0.0.2",
         "require-dir": "^0.3.1",
         "spawn-helper": "^0.0.5",
         "tslib": "^2.0.0",
@@ -40,13 +39,9 @@
         "tslint": "^5.1.0",
         "typescript": "^3.9.7"
     },
-    "keywords": [
-        "typescript"
-    ],
+    "keywords": ["typescript"],
     "author": "hubiqing",
     "repository": "https://github.com/githbq/hbq-module-cli-boilerplate.git",
-    "engines": {
-        "node": ">=10"
-    },
+    "engines": {"node": ">=10"},
     "license": "MIT"
 }

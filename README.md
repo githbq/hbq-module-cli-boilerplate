@@ -3,16 +3,18 @@
 ![my love](./logo.png) 
 
 ## 功能介绍
-1. 简介1 
-2. 简介2   
+1. 易于使用的cli模板
+2. 帮助你快速高效的开发cli工具   
 
 ## 安装
 ```
 yarn
 ```
 
-## 测试   
+## 开发时运行   
 ```
-npm run test    
+node run start   
+node run demo 
+// ... others 
 ```
  

@@ -4,9 +4,9 @@ export default {
      * 启动
      */
     async start(data) {
-        console.log('hello cli')
+        console.log('hello demo')
     },
-    command: ['start', '开始', {
+    command: ['开始', {
         // remove: {
         //     alias: ['r'],
         //     boolean: true,
