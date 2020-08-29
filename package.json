@@ -1,6 +1,6 @@
 {
     "name": "xxxx-cli",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "description": "command line project boilerplate",
     "publishConfig": {
         "registry": "https://registry.npmjs.org"
