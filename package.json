@@ -2,6 +2,9 @@
     "name": "xxxx-cli",
     "version": "1.0.10",
     "description": "command line project boilerplate",
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org"
+    },
     "main": "build/command",
     "bin": {"xxxx": "./bin.js"},
     "scripts": {
