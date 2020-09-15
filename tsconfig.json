@@ -3,6 +3,7 @@
     "target": "es2017",
     "module": "commonjs",
     "moduleResolution": "node",
+    "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
@@ -29,7 +30,10 @@
     "rootDir": "./src"
   },
   "include": [
-    "./src"
+    "./src/**/*"
+  ],
+  "exclude": [
+    "**/node_modules/**/*"
   ],
   "compileOnSave": false,
   "buildOnSave": false
