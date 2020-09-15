@@ -6,7 +6,9 @@
         "registry": "https://registry.npmjs.org"
     },
     "main": "build/command",
-    "bin": {"xxxx": "./bin.js"},
+    "bin": {
+        "xxxx": "./build/bin/index.js"
+    },
     "scripts": {
         "start:build": "npm run tsc && node build",
         "start": "node run",
@@ -43,9 +45,13 @@
         "tslint": "^5.1.0",
         "typescript": "^3.9.7"
     },
-    "keywords": ["typescript"],
+    "keywords": [
+        "typescript"
+    ],
     "author": "hubiqing",
     "repository": "https://github.com/githbq/hbq-module-cli-boilerplate.git",
-    "engines": {"node": ">=10"},
+    "engines": {
+        "node": ">=10"
+    },
     "license": "MIT"
 }
