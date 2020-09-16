@@ -39,6 +39,7 @@
         "@types/cli-color": "^0.3.29",
         "@types/lodash": "^4.14.64",
         "@types/node": "^6.0.48",
+        "@types/jest": "^26.0.13",
         "jest": "^26.4.2",
         "ts-jest": "^26.3.0",
         "rimraf": "^2.6.1",
