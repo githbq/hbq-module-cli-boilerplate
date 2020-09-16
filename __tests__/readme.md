@@ -1,5 +1,34 @@
+ 
+demo1
+
+``` ts
+ describe('module-poilerplate: index', () => {
+  const mocks = {
+    files: {
+      yourModule: { run: jest.fn() }
+    }
+  }
+
+  beforeAll(() => {
+    jest.mock('../yourModule', () => function yourModule() {
+      return { run: mocks.files.yourModule.run }
+    })
+  })
+
+  test('运行脚手架，调用run方法', () => {
+    require('../index')
+
+    expect(mocks.files.yourModule.run).toHaveBeenCalled()
+  })
+})
+
+```
+
+demo2
+
+``` ts
 /* eslint global-require: 0, no-sync: 0 */
-describe('@hufe/mobile-core: webpack-config/index', () => {
+describe.skip('@hufe/mobile-core: webpack-config/index', () => {
   const mocks = {
     hufe: {
       scaffoldCore: {
@@ -92,11 +121,13 @@ describe('@hufe/mobile-core: webpack-config/index', () => {
           mocks.files.extensionNodeConfig
         ]
       },
-      {
-        config: {},
-        isDev: false,
-        buildEnv: 'production'
-      })
+        {
+          config: {},
+          isDev: false,
+          buildEnv: 'production'
+        })
     })
   })
 })
+
+```

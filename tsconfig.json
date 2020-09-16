@@ -24,7 +24,8 @@
     "types": [
       "cli-color",
       "lodash",
-      "node"
+      "node",
+      "jest"
     ],
     "outDir": "./build",
     "rootDir": "./src"
