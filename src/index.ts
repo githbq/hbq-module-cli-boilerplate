@@ -20,7 +20,7 @@ export function start() {
       yargs.command.apply(null, result.command.slice(0, 3).concat(async (argv) => {
         try {
           consoleColor.time(`${key} 总耗时`)
-          await result.start(argv)
+          await result.start.call(result, argv)
         } catch (e) {
           consoleColor.red(`发生错误${e.message}`)
           consoleColor.red(e.stack)
