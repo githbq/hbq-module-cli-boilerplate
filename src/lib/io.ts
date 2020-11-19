@@ -1,13 +1,17 @@
 import * as pathTool from 'path'
-import * as fs from 'fs-extra-promise'
+import * as fs from 'fs-extra'
 import * as _ from 'lodash'
 
 import { rootPath, cwd } from './consts'
 import { stringify } from './other'
+import * as rimraf from 'rimraf'
+
 /**
  * 文件操作　全部是异步的
  */
 export const io = {
+    fs,
+    rimraf,
     pathTool,
     /**
      * 路径预处理
@@ -22,7 +26,7 @@ export const io = {
     },
     read(path: string | Array<string>, options: any = { fromRoot: false, fromCwd: false }) {
         const newPath = this.resolveOptions(path, options)
-        return fs.readFileAsync(newPath, 'utf8')
+        return fs.readFile(newPath, 'utf8')
     },
     readJson(path: string | Array<string>, options: any = { fromRoot: false, fromCwd: false }) {
         const newPath = this.resolveOptions(path, options)
