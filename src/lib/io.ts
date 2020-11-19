@@ -30,20 +30,20 @@ export const io = {
     },
     readJson(path: string | Array<string>, options: any = { fromRoot: false, fromCwd: false }) {
         const newPath = this.resolveOptions(path, options)
-        return fs.readJsonAsync(newPath)
+        return fs.readJson(newPath)
     },
     write(path: string | Array<string>, content, options: any = { fromRoot: false, fromCwd: false }) {
         const newPath = this.resolveOptions(path, options)
         // 对对象进行 美化格式处理
         content = _.isObject(content) ? stringify(content) : content
-        return fs.outputFileAsync(newPath, content)
+        return fs.outputFile(newPath, content)
     },
     delete(path: string | Array<string>, options: any = { fromRoot: false, fromCwd: false }) {
         const newPath = this.resolveOptions(path, options)
-        return fs.removeAsync(newPath)
+        return fs.remove(newPath)
     },
     exists(path: string | Array<string>, options: any = { fromRoot: false, fromCwd: false }) {
         const newPath = this.resolveOptions(path, options)
-        return fs.existsAsync(newPath)
+        return fs.exists(newPath)
     },
 }
