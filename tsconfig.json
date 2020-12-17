@@ -15,11 +15,14 @@
         "strictNullChecks": false,
         "allowUnreachableCode": true,
         "newLine": "LF",
-        "lib": ["es2017"],
-        "typeRoots": ["node_modules/@types"],
+        "lib": [
+            "es2017"
+        ],
+        "typeRoots": [
+            "node_modules/@types"
+        ],
         "types": [
             "cli-color",
-            "fs-extra",
             "jest",
             "lodash",
             "node"
@@ -27,8 +30,12 @@
         "outDir": "./build",
         "rootDir": "./src"
     },
-    "include": ["./src/**/*"],
-    "exclude": ["**/node_modules/**/*"],
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": [
+        "**/node_modules/**/*"
+    ],
     "compileOnSave": false,
     "buildOnSave": false
 }
