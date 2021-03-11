@@ -14,7 +14,7 @@ export const templateTransfrom = async (dir, config) => {
                 await fs.outputFile(fileAbsolutePath, newContent)
             }
         } catch (err) {
-            console.error(`文件模板: ${fileAbsolutePath} 转换异常`)
+            console.error(`文件: ${fileAbsolutePath} 模板转换异常`, pathData)
             console.error(err)
         }
     }
