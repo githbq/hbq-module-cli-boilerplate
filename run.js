@@ -1,4 +1,5 @@
  require('ts-node/register') 
+ process.chdir('C:\\Users\\hubiqing\\Desktop\\temp\\abc')
  require('./src')
      //tsconfig 帮助文档地址
      //https://zhongsp.gitbooks.io/typescript-handbook/content/doc/handbook/tsconfig.json.html
