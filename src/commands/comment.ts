@@ -4,9 +4,9 @@ export default {
      * 启动
      */
     async start(data) {
-        console.log('hello demo', data)
+        console.log('hello comment',data)
     },
-    command: ['[cli] demo', {
+    command: ['<comment>','[cli] demo-2 [youComment]', {
         // remove: {
         //     alias: ['r'],
         //     boolean: true,
