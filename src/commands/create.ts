@@ -20,7 +20,7 @@ export default {
             consoleColor.error(err)
         }
     },
-    async create(name, dest) {
+    async create(dest) {
         try {
             if (await io.fs.pathExists(dest)) {
                 if (!await confirm(`路径:${dest} ,已存在是否强制覆盖`)) { return false }
