@@ -31,10 +31,7 @@ export default {
         } catch (err) {
             console.error(err)
         }
-    },
-    async transform() {
-
-    },
+    }, 
     command: ['<name>', '开始', {
         // remove: {
         //     alias: ['r'],
