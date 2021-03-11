@@ -46,4 +46,5 @@ export const io = {
         const newPath = this.resolveOptions(path, options)
         return fs.exists(newPath)
     },
+    
 }
