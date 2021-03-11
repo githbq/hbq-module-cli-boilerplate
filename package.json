@@ -1,13 +1,13 @@
 {
-    "name": "xxxx-cli",
-    "version": "1.0.11",
-    "description": "command line project boilerplate",
+    "name": "cli-parent",
+    "version": "0.0.1",
+    "description": "command line base cli-parent",
     "publishConfig": {
         "registry": "https://registry.npmjs.org"
     },
-    "main": "build/command",
+    "main": "build/core.js",
     "bin": {
-        "xxxx": "./build/bin/index.js"
+        "cli-parent": "./build/bin/index.js"
     },
     "scripts": {
         "start:build": "npm run tsc && node build",
