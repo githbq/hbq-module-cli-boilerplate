@@ -1,5 +1,5 @@
-import { consoleColor, cwd, io, rootPath, templateTransfrom, confirm } from '../lib'
-import * as extract from 'extract-zip' 
+import { consoleColor, cwd, io, rootPath, templateTransfrom, confirm, initProject } from '../lib'
+import * as extract from 'extract-zip'
 export default {
     /**
      * 启动
@@ -16,6 +16,7 @@ export default {
             let result = await this.create(name, dest)
             if (result === false) return
             await templateTransfrom(dest, this.getTemplateConfig(data))
+            await initProject(dest)
         } catch (err) {
             consoleColor.error(err)
         }
@@ -31,7 +32,7 @@ export default {
         } catch (err) {
             console.error(err)
         }
-    }, 
+    },
     command: ['<name>', '开始', {
         // remove: {
         //     alias: ['r'],
