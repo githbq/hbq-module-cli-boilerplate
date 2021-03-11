@@ -1,4 +1,4 @@
-import { consoleColor, cwd, io, rootPath, templateTransfrom, confirm, initProject } from '../lib'
+import { consoleColor, cwd, io, rootPath, templateTransfrom, confirm, initProject } from '../utils'
 import * as extract from 'extract-zip'
 export default {
     /**

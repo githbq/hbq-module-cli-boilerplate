@@ -1,6 +1,6 @@
 import * as requireDir from 'require-dir'
 import * as  yargs from 'yargs'
-import { exit, consoleColor } from './lib'
+import { exit, consoleColor } from './utils'
 import * as  momentHelper from 'moment-helper'
 
 function start(commandPath?) {
