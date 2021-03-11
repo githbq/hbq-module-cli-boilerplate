@@ -1,4 +1,4 @@
-import { consoleColor, cwd, io, rootPath, templateTransfrom, confirm } from '../lib'
+import { consoleColor, cwd, io, rootPath, templateTransfrom, confirm } from '../utils'
 import * as extract from 'extract-zip' 
 export default {
     /**

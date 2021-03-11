@@ -1,4 +1,4 @@
-import { consoleColor } from '../lib'
+import { consoleColor } from '../utils'
 export default {
     /**
      * 启动
