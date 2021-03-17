@@ -26,8 +26,10 @@ export default {
             if (await io.fs.pathExists(dest)) {
                 if (!await confirm(`路径:${dest} ,已存在是否强制覆盖`)) { return false }
             }
-            await io.fs.emptyDir(dest) 
-            await extract(io.pathTool.join(rootPath, 'templates', 'project.zip'), { dir: dest })
+            await io.fs.emptyDir(dest)
+            const templatePath = io.pathTool.join(rootPath, 'templates', 'project.zip')
+            console.log('templatePath@', templatePath)
+            await extract(templatePath, { dir: dest })
             consoleColor.green(`工程创建完成 cd ${dest}`, true)
         } catch (err) {
             console.error(err)
