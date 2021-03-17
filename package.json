@@ -1,6 +1,6 @@
 {
     "name": "cli-parent",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "command line base cli-parent",
     "publishConfig": {
         "registry": "https://registry.npmjs.org"
@@ -30,6 +30,7 @@
         "ora": "^1.2.0",
         "pretty-ms": "^2.1.0",
         "require-dir": "^0.3.1",
+        "semver": "^7.3.4",
         "spawn-helper": "^0.0.5",
         "tslib": "^2.0.0",
         "yargs": "^7.1.0"

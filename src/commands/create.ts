@@ -1,4 +1,4 @@
-import { consoleColor, cwd, io, rootPath, templateTransfrom, confirm, initProject } from '../utils'
+import { consoleColor, cwd, io, rootPath, templateTransfrom, confirm, projectHelper } from '../utils'
 import * as extract from 'extract-zip'
 export default {
     /**
@@ -16,7 +16,7 @@ export default {
             let result = await this.create(dest)
             if (result === false) return
             await templateTransfrom(dest, this.getTemplateConfig(data))
-            await initProject(dest)
+            await projectHelper.initProject(dest)
         } catch (err) {
             consoleColor.error(err)
         }

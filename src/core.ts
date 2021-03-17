@@ -1,13 +1,12 @@
 import * as requireDir from 'require-dir'
 import * as  yargs from 'yargs'
-import { exit, consoleColor } from './utils'
+import { exit, consoleColor,packageHelper} from './utils'
 import * as  momentHelper from 'moment-helper'
 
-function start(commandPath?) {
+async function start(commandPath?) {
   commandPath = commandPath || './commands'
   const commands = requireDir(commandPath, { recurse: true })
-
-  consoleColor.yellow(' 操作时间：' + momentHelper.get())
+  consoleColor.yellow(`~~~~~~ version@${await packageHelper.getVersion()} & time：${momentHelper.get()} ~~~~~~~\n`)
   let hit = false
   Object.keys(commands).forEach(key => {
     const result = (commands[key].index || commands[key]).default

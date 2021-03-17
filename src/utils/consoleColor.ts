@@ -14,7 +14,10 @@ export const consoleColor = {
         this.color(color.green, msg, ok, bold)
     },
     yellow(msg, ok?: boolean, bold: boolean = false) {
-        this.color(bold ? color.yellowBright : color.yellow, msg, ok, bold, bold)
+        this.color(color.yellow, msg, ok, bold, bold)
+    },
+    yellowBright(msg, ok?: boolean, bold: boolean = false) {
+        this.color(color.yellowBright, msg, ok, bold, bold)
     },
     red(msg, ok?: boolean, bold: boolean = false) {
 
