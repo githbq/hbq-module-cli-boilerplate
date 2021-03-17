@@ -1,7 +1,7 @@
 import * as color from 'cli-color'
 import * as ora from 'ora'
 
-import { prettyMs } from './other'
+import { prettyMs } from './others'
 
 export const consoleColor = {
     ok: ' √ ',

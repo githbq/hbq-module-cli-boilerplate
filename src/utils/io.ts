@@ -3,7 +3,7 @@ import * as fs from 'fs-extra'
 import * as _ from 'lodash'
 
 import { rootPath, cwd } from './consts'
-import { stringify } from './other'
+import { stringify } from './others'
 import * as rimraf from 'rimraf'
 
 /**

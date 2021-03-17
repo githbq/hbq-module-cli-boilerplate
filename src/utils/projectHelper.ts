@@ -2,7 +2,7 @@ import * as pathTool from 'path'
 import * as globby from 'globby'
 import * as fs from 'fs-extra'
 import { ignorePattern, cwd } from './consts'
-import { exec } from './other'
+import { exec } from './others'
 
 
 export const projectHelper = {
