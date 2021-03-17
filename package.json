@@ -1,6 +1,6 @@
 {
     "name": "cli-parent",
-    "version": "0.0.10",
+    "version": "0.0.11",
     "description": "command line base cli-parent",
     "publishConfig": {
         "registry": "https://registry.npmjs.org"
