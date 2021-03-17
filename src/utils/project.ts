@@ -15,14 +15,9 @@ export const initProject = async (cwd) => {
         }
     ]
     for (let cmd of cmds) {
-        try {
-            if (typeof cmd === 'function') {
-                cmd = await cmd()
-            }
-            consoleColor.start(cmd)
-            await exec(cmd, { cwd })
-        } catch (e) {
-            consoleColor.error(e)
+        if (typeof cmd === 'function') {
+            cmd = await cmd()
         }
+        await exec(cmd, { cwd }) 
     }
 }
