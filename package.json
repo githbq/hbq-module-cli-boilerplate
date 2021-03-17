@@ -15,7 +15,8 @@
         "tsc:w": "npm run clear && tsc -w",
         "p": "npm run tsc && npm publish",
         "test": "jest --forceExit --detectOpenHandles --colors",
-        "lint": "eslint --ext .ts src --fix"
+        "lint": "eslint --ext .ts src --fix",
+        "postpublish":"npm i -g cli-parent --registry=https://registry.npmjs.org"
     },
     "dependencies": {
         "bluebird": "^3.7.2",
