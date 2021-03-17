@@ -55,14 +55,23 @@ export async function confirm(describe) {
 /**
  * 执行shell命令
  */
-export function exec(cmd: string, opt?: any) {
-  return spawn.exec(cmd, {
-    cwd,
-    onStdout(msg) {
-    },
-    onStderr(msg) {
-    }, preventDefault: false, ...opt
-  })
+export async function exec(cmd: string, opt?: any) {
+  consoleColor.start(cmd)
+  let response
+  try {
+    response = await spawn.exec(cmd, {
+      cwd,
+      onStdout(msg) {
+      },
+      onStderr(msg) {
+      }, preventDefault: false, ...opt
+    })
+  } catch (error) {
+    consoleColor.error(error)
+    response = false
+    opt.onError && opt.onError(error)
+  }
+  return response
 }
 /**
  * 美化时间毫秒输出
